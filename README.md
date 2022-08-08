@@ -24,6 +24,7 @@ cd /opt
 sudo apt install unzip
 sudo unzip openclinic-package-v5.155.03.zip
 cd openclinic-package-v5.155.03
+mv /opt/openclinic.package/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0 /opt/openclinic-SNAPSHOT-1.0.0
 ```
 #### Dependencies
 1. MySQL
