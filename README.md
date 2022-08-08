@@ -12,7 +12,8 @@ Open clinic project extention based on `http://openclinic.sourceforge.net/`
 apt update
 apt install git
 git clone https://github.com/plydot/openclinic.package.git
-cd openclinic.package
+mv openclinic.package /opt/openclinic.package
+cd /opt/openclinic.package
 sudo chmod u+x wgetgdrive.sh
 sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S openclinic-package-v5.155.03.zip
 mv openclinic-package-v5.155.03.zip /opt/openclinic-package-v5.155.03.zip
