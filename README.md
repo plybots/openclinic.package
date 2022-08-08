@@ -104,7 +104,8 @@ Import initial data.
 ```
 source /opt/openclinic.package/sql/db.sql
 exist
-mysql -u openclinic -p -d ocadmin_dbo < /opt/openclinic.package/sql/keys.sql
+mysql -u openclinic -p ocadmin_dbo < /opt/openclinic.package/sql/keys.sql
+----password 0pen----
 ```
 
 3. Java 
