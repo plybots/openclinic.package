@@ -101,9 +101,9 @@ FLUSH PRIVILEGES;
 ```
 Import initial data.
 ```
-source /opt/open-clinic/sql/db.sql
+source /opt/openclinic.package/sql/db.sql
 exist
-mysql -u openclinic -p -d ocadmin_dbo < /opt/open-clinic/sql/keys.sql
+mysql -u openclinic -p -d ocadmin_dbo < /opt/openclinic.package/sql/keys.sql
 ```
 
 3. Java 
