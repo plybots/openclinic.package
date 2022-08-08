@@ -135,14 +135,14 @@ After=network.target
 Type=forking
 User=root
 
-Environment=CATALINA_PID=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/tomcat.pid
+Environment=CATALINA_PID=/opt/openclinic-SNAPSHOT-1.0.0/tomcat.pid
 # Environment=JAVA_HOME=/usr/bin/java
-Environment=CATALINA_HOME=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/
-Environment=CATALINA_BASE=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/
+Environment=CATALINA_HOME=/opt/openclinic-SNAPSHOT-1.0.0/
+Environment=CATALINA_BASE=/opt//openclinic-SNAPSHOT-1.0.0/
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 
-ExecStart=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/bin/startup.sh
-ExecStop=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/bin/shutdown.sh
+ExecStart=/opt/openclinic-SNAPSHOT-1.0.0/bin/startup.sh
+ExecStop=/opt/openclinic-SNAPSHOT-1.0.0/bin/shutdown.sh
 Restart=on-failure
 
 [Install]
