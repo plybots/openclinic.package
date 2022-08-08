@@ -28,6 +28,7 @@ cd openclinic-package-v5.155.03
 1. MySQL
 Install MySQL version 5.7, use the file `mysql-apt-config_0.8.12-1_all.deb` in the installation folder.
 - Follow this [guide](https://www.how2shout.com/linux/add-repository-to-install-mysql-5-7-on-ubuntu-20-04-lts-linux/) and install mysql 5.7
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 68980A0EA10B4DE8
 - Edit the `cnf` file.
 ```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
