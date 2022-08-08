@@ -138,7 +138,7 @@ User=root
 Environment=CATALINA_PID=/opt/openclinic-SNAPSHOT-1.0.0/tomcat.pid
 # Environment=JAVA_HOME=/usr/bin/java
 Environment=CATALINA_HOME=/opt/openclinic-SNAPSHOT-1.0.0/
-Environment=CATALINA_BASE=/opt//openclinic-SNAPSHOT-1.0.0/
+Environment=CATALINA_BASE=/opt/openclinic-SNAPSHOT-1.0.0/
 Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 
 ExecStart=/opt/openclinic-SNAPSHOT-1.0.0/bin/startup.sh
