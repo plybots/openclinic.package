@@ -10,13 +10,14 @@ Open clinic project extention based on `http://openclinic.sourceforge.net/`
 - Clone the repository to your server and move the zip file to the `/opt` directory.
 ```
 git clone https://fabricate.plydot.com/io/open-clinic.git
+cd open-clinic
+sudo chmod u+x wgetgdrive.sh
+sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S openclinic-package-v5.155.03.zip
 mv open-clinic/openclinic-package-v5.155.03.zip /opt/openclinic-package-v5.155.03.zip
 cd /opt
 ```
 - Unzip the Installation package
 ```
-sudo chmod u+x wgetgdrive.sh
-sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S openclinic-package-v5.155.03.zip
 sudo apt install unzip
 sudo unzip openclinic-package-v5.155.03.zip
 cd openclinic-package-v5.155.03
