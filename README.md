@@ -154,6 +154,8 @@ Enable service and start service
 sudo systemctl enable openclinic.service 
 sudo systemctl start openclinic.service
 sudo systemctl status openclinic.service
+> sudo systemctl stop openclinic.service
+> sudo systemctl restart openclinic.service
 ```
 >> output
 ```
