@@ -29,8 +29,22 @@ mv /opt/openclinic.package/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.
 #### Dependencies
 1. MySQL
 Install MySQL version 5.7, use the file `mysql-apt-config_0.8.12-1_all.deb` in the installation folder.
-- Follow this [guide](https://www.how2shout.com/linux/add-repository-to-install-mysql-5-7-on-ubuntu-20-04-lts-linux/) and install mysql 5.7
-> sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 68980A0EA10B4DE8
+- Follow this [guide](https://www.how2shout.com/linux/add-repository-to-install-mysql-5-7-on-ubuntu-20-04-lts-linux/) and install mysql 5.7 (excecute steps 1 -5 only).
+- If this error ocuurs while running `apt update `
+```
+Err:5 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+Reading package lists... Done
+W: GPG error: http://repo.mysql.com/apt/ubuntu bionic InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
+E: The repository 'http://repo.mysql.com/apt/ubuntu bionic InRelease' is not signed.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+```
+Execute the following command (Note to replace the key with one on your console if different):
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+sudo apt update
+```
 - Edit the `cnf` file.
 ```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
