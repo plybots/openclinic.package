@@ -128,7 +128,7 @@ Install Java 8
 ```
 sudo apt install openjdk-8-jdk
 ```
-`java --version`
+`java -version`
 >> output
 ```
 openjdk version "1.8.0_252"
