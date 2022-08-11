@@ -11,20 +11,19 @@ Open clinic project extention based on `http://openclinic.sourceforge.net/`
 ```
 apt update
 apt install git
-git clone https://github.com/plydot/openclinic.package.git
-mv openclinic.package /opt/openclinic.package
-cd /opt/openclinic.package
+cd ~
+git clone https://github.com/plydot/openclinic.package.git config
+cd config
 sudo chmod u+x wgetgdrive.sh
-sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S openclinic-package-v5.155.03.zip
-mv openclinic-package-v5.155.03.zip /opt/openclinic-package-v5.155.03.zip
-cd /opt
+sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S application.zip
 ```
 - Unzip the Installation package
 ```
 sudo apt install unzip
-sudo unzip openclinic-package-v5.155.03.zip
-cd openclinic-package-v5.155.03
-mv /opt/openclinic.package/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0 /opt/openclinic-SNAPSHOT-1.0.0
+sudo unzip application.zip
+mv ~/application/openclinic /opt/openclinic
+mv ~/application/sql /opt/sql
+mv ~/application/mysql-apt-config_0.8.12-1_all.deb /opt/mysql-apt-config_0.8.12-1_all.deb
 ```
 #### Dependencies
 1. MySQL
@@ -59,6 +58,9 @@ Restart mysql using `sudo service mysql restart`\
 Create mysql user, databases and tables.\
 `sudo mysql`
 ```
+CREATE DATABASE `ikirezi` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `ocadmin_dbo` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `ocstats_dbo` /*!40100 DEFAULT CHARACTER SET latin1 */;
 CREATE DATABASE `openclinic_dbo` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 CREATE USER 'openclinic'@'%' IDENTIFIED BY '0pen';
@@ -114,13 +116,20 @@ GRANT Execute ON *.* TO 'openclinic'@'%';
 GRANT Lock tables ON *.* TO 'openclinic'@'%';
 GRANT Grant option ON *.* TO 'openclinic'@'%';
 FLUSH PRIVILEGES;
+exit
 ```
 Import initial data.
 ```
-source /opt/openclinic.package/sql/db.sql
-exist
-mysql -u openclinic -p ocadmin_dbo < /opt/openclinic.package/sql/keys.sql
-----password 0pen----
+mysql ikirezi < /opt/sql/dump-ikirezi-202208111058.sql
+mysql ocstats_dbo < /opt/sql/dump-ocstats_dbo-202208111058.sql
+> ERROR 1146 (42S02) at line 803: Table 'ocadmin_dbo.admin' doesn't exist
+mysql ocadmin_dbo < /opt/sql/dump-ocadmin_dbo-202208111058.sql
+> ERROR 1146 (42S02) at line 2043: Table 'openclinic_dbo.oc_labels' doesn't exist
+mysql openclinic_dbo < /opt/sql/dump-openclinic_dbo-202208111058.sql
+> ERROR 1146 (42S02) at line 9710: Table 'ocadmin_dbo.labels' doesn't exist
+mysql ocstats_dbo < /opt/sql/dump-ocstats_dbo-202208111058.sql
+mysql ocadmin_dbo < /opt/sql/dump-ocadmin_dbo-202208111058.sql
+mysql openclinic_dbo < /opt/sql/dump-openclinic_dbo-202208111058.sql
 ```
 
 3. Java 
