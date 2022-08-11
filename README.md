@@ -15,7 +15,7 @@ cd ~
 git clone https://github.com/plydot/openclinic.package.git config
 cd config
 sudo chmod u+x wgetgdrive.sh
-sudo ./wgetgdrive.sh 1DD2uab7X6aw1ZBXDHlT0tmd4m4-O2i7S application.zip
+sudo ./wgetgdrive.sh 1O6fEwgFg3Gd1MkI1BDqTuPa58LFZHaLY application.zip
 ```
 - Unzip the Installation package
 ```
