@@ -29,7 +29,7 @@ mv /opt/openclinic.package/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.
 #### Dependencies
 1. MySQL
 Install MySQL version 5.7, use the file `mysql-apt-config_0.8.12-1_all.deb` in the installation folder.
-- Follow this [guide](https://www.how2shout.com/linux/add-repository-to-install-mysql-5-7-on-ubuntu-20-04-lts-linux/) and install mysql 5.7 (excecute steps 1 -5 only).
+- Follow this [guide](https://www.how2shout.com/linux/add-repository-to-install-mysql-5-7-on-ubuntu-20-04-lts-linux/) and install mysql 5.7 (excecute steps 1 -5 only and set `root` with no password).
 - If this error ocuurs while running `apt update `
 ```
 Err:5 http://repo.mysql.com/apt/ubuntu bionic InRelease
