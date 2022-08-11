@@ -198,7 +198,10 @@ sudo service openclinic restart
 ```
 The application is now accesible directly through the IP Address of your server.
 i.e. `http://my-server-ip-address/openclinic/`
-
+```
+username: openclinic
+password: whippet572
+```
 
 ## Authors and acknowledgment
 &copy; 2022 [Plydot Systems](https://plydot.com)
