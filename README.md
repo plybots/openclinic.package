@@ -175,10 +175,8 @@ WantedBy=multi-user.target
 Enable service and start service
 ```
 sudo systemctl enable openclinic.service 
-sudo systemctl start openclinic.service
-sudo systemctl status openclinic.service
-> sudo systemctl stop openclinic.service
-> sudo systemctl restart openclinic.service
+sudo service openclinic start
+sudo service openclinic status
 ```
 >> output
 ```
@@ -192,6 +190,11 @@ sudo systemctl status openclinic.service
              └─2730 /usr/bin/java -Djava.util.logging.config.file=/opt/openclinic-package-v5.155.03/openclinic-SNAPSHOT-1.0.0/conf/logging.properties -Dja>
 
 Warning: journal has been rotated since unit was started, output may be incomplete.
+```
+Other operations
+```
+sudo service openclinic stop
+sudo service openclinic restart
 ```
 The application is now accesible directly through the IP Address of your server.
 i.e. `http://my-server-ip-address/openclinic/`
