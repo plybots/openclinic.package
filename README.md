@@ -204,8 +204,19 @@ password: whippet572
 ```
 
 ### MYSQL DUMP DB
-`mysql database_name > database_name.sql`
+`mysql database_name > database_name.sql`\
 `mysql -u user -pPassword db_name > db_name.sql`
+
+## UPDATE EXISTING
+```
+- replace `/webapps/openclinic/_common/header.jsp`
+- replace `/webapps/onclinic/_common/start.jsp`
+- replace `ROOT` directory
+```
+#### Update Tables
+```
+mysql 
+```
 
 ## Authors and acknowledgment
 &copy; 2022 [Plydot Systems](https://plydot.com)
