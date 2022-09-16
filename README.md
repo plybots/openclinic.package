@@ -215,7 +215,7 @@ password: whippet572
 ```
 #### Update Tables
 ```
-mysql 
+mysql ocadmin_dbo < keys.sql
 ```
 
 ## Authors and acknowledgment
