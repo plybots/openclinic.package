@@ -203,6 +203,10 @@ username: openclinic
 password: whippet572
 ```
 
+### MYSQL DUMP DB
+`mysql database_name > database_name.sql`
+`mysql -u user -pPassword db_name > db_name.sql`
+
 ## Authors and acknowledgment
 &copy; 2022 [Plydot Systems](https://plydot.com)
 
