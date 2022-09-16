@@ -209,9 +209,9 @@ password: whippet572
 
 ## UPDATE EXISTING
 ```
-- replace `/webapps/openclinic/_common/header.jsp`
-- replace `/webapps/onclinic/_common/start.jsp`
-- replace `ROOT` directory
+- replace `/webapps/openclinic/_common/header.jsp` #Remember to backup existing file
+- replace `/webapps/onclinic/_common/start.jsp` #Remember to backup existing file
+- replace `ROOT` directory #Remember to backup existing folder
 ```
 #### Update Tables
 ```
