@@ -25,5 +25,6 @@ volumes:
 
 # RUN THIS AFTER COMPOSE COMPLETES
 # docker cp mysqld.cnf openclinicdb:/etc/mysql/mysql.conf.d/mysqld.cnf
+# Replace `/opt/openclinic/webapps/api/WEB-INF/classes/application.properties` with `repo\application.properties`
 # docker openclinicdb restart
 # docker openclinic restart
