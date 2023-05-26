@@ -1,7 +1,7 @@
 version: '3'
 services:
     openclinic:
-        image: openclinic:latest
+        image: plydot/openclinic:latest
         ports:
             - 5050:80
         depends_on:
