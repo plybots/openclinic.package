@@ -2,12 +2,14 @@ version: '3'
 services:
     openclinic:
         image: plydot/openclinic:latest
+        container_name: openclinic
         ports:
             - 5050:80
         depends_on:
             - openclinicdb
     openclinicdb:
         image: mysql:5.7
+        container_name: openclinicdb
         ports:
             - 33067:3306
         environment:
