@@ -18,3 +18,7 @@ services:
             MYSQL_USER: openclinic
             MYSQL_PASSWORD: 0pen
         command: --skip-ssl --lower-case-table-names=1
+        volumes:
+            - openclinicdb_data:/var/lib/mysql
+volumes:
+    openclinicdb_data:
