@@ -3,6 +3,7 @@ FROM ubuntu:18.04
 RUN apt update \
     && apt install -y git \
     && apt install -y unzip \
+    && apt install -y wget \
     && apt install -y openjdk-8-jdk
 
 WORKDIR /root
