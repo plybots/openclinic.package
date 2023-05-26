@@ -22,3 +22,8 @@ services:
             - ./openclinicdb_db:/var/lib/mysql
 volumes:
     openclinicdb_data:
+
+# RUN THIS AFTER COMPOSE COMPLETES
+# docker cp mysqld.cnf openclinicdb:/etc/mysql/mysql.conf.d/mysqld.cnf
+# docker openclinicdb restart
+# docker openclinic restart
