@@ -27,4 +27,5 @@ ENV JAVA_OPTS -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom
 
 RUN apt-get install -y mysql-client
 
-CMD mysql -h localhost -u root -p0pen --force < /root/init.sql && /opt/openclinic/bin/startup.sh
+# CMD mysql -h localhost -u root -p0pen --force < /root/init.sql && /opt/openclinic/bin/startup.sh
+CMD ["/opt/openclinic/bin/startup.sh"]
