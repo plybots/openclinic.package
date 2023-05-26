@@ -18,7 +18,7 @@ RUN unzip /root/config/application.zip \
     && mv /root/application/sql /opt/sql
     
 RUN cp /root/config/sql/init.sql /root/init.sql
-RUN cp /root/config/db.cfg /opt/openclinic/conf/db.cfg
+# RUN cp /root/config/db.cfg /opt/openclinic/conf/db.cfg
 
 ENV CATALINA_PID /opt/openclinic/tomcat.pid
 ENV CATALINA_HOME /opt/openclinic/
