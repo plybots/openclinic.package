@@ -10,14 +10,14 @@ WORKDIR /root
 
 RUN git clone https://github.com/plydot/openclinic.package.git config \
     && cd config \
-    && mv sql/init.sql /root/init.sql \
+    && cp sql/init.sql /root/ \
     && chmod u+x wgetgdrive.sh \
     && ./wgetgdrive.sh 1O6fEwgFg3Gd1MkI1BDqTuPa58LFZHaLY application.zip
 
 RUN unzip /root/config/application.zip \
     && mv /root/application/openclinic /opt/openclinic \
     && mv /root/application/sql /opt/sql \
-    $$ mv /root/config/db.cfg /opt/openclinic/conf/db.cfg
+    $$ cp /root/config/db.cfg /opt/openclinic/conf/
 
 ENV CATALINA_PID /opt/openclinic/tomcat.pid
 ENV CATALINA_HOME /opt/openclinic/
