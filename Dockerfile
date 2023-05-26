@@ -29,4 +29,4 @@ RUN apt-get install -y mysql-client
 
 RUN mysql -h openclinicdb -u root -p0pen < /root/init.sql
 
-CMD ["/opt/openclinic/bin/startup.sh"]
+CMD mysql -h openclinicdb -u root -p0pen < /root/init.sql && /opt/openclinic/bin/startup.sh
