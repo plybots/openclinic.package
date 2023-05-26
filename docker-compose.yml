@@ -5,7 +5,7 @@ services:
         ports:
             - 5050:80
         depends_on:
-            - mysql
+            - openclinicdb
     openclinicdb:
         image: mysql:5.7
         ports:
